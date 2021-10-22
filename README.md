@@ -1,5 +1,3 @@
-**[Project - WIP]**
-
 ## auto_report_using_dash_python
 Create report template using Dash, Python for Finance team to download financial reports directly.
 
@@ -7,7 +5,7 @@ Create report template using Dash, Python for Finance team to download financial
 
 #### 1. Clone this repository and open a terminal inside the root folder.
 
-#### 2. Install the requirements:
+#### 2. Install the requirements *(to be done in virtual environment)*:
 
 ```bash
 pip install -r requirements.txt
