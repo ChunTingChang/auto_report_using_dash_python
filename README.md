@@ -1,4 +1,9 @@
 ## auto_report_using_dash_python
+
+![demo_img](resources/demo.png)
+
+## Prject Description 
+
 Create report template using Dash, Python for Finance team to download financial reports directly.
 
 ## How to run the app
