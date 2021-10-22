@@ -1,0 +1,7 @@
+client,currency,fixed_exchange_rate,fee_structure,is_internal
+client_A,N/A,0,0,True
+client_B,N/A,0,0,True
+client_C,EUR,1.1,0.4,False
+client_D,GBP,1,0.35,False
+client_E,CNY,9,0.25,False
+client_F,Bitcoin,0.00001,0.17,False
