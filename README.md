@@ -23,9 +23,6 @@ python app.py
 #### 4. Open a browser at http://127.0.0.1:8050
 
 
-```
-pip install dash
-```
 ### Credit
 
 - [Bootstrap](https://github.com/tcbegley/dash-bootstrap-css)
