@@ -2,6 +2,13 @@
 
 ![demo_img](resources/demo.png)
 
+## Demo Site
+
+Click [here](https://dash-demo-293b499aacc7.herokuapp.com/)
+
+- user name: test
+- password: test
+
 ## Prject Description 
 
 Create report template using Dash, Python for Finance team to download financial reports directly.
