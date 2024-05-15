@@ -1,12 +1,7 @@
-
 # coding: utf-8
-
-# In[ ]:
-
+import os
 import dash_core_components as dcc
 import dash_html_components as html
-# import dash as html
-# import dash as dcc
 from dash_table.Format import Format
 
 import pandas as pd
@@ -23,8 +18,6 @@ import dash_table
 import dash_auth
 
 
-# In[ ]:
-
 # read in client details raw data
 
 contract_details = pd.read_csv(r'resources/partner_details.csv')
@@ -36,8 +29,6 @@ contract_details = contract_details.rename(columns = {
     'fee_structure': 'Fee Structure'
 })
 
-
-# In[ ]:
 
 # format datatable columns for client details
 
@@ -130,16 +121,12 @@ for i in col:
     columns.append(tmp)
 
 
-# In[ ]:
-
 # auth
 
 user_login_info = {
     'test': 'test',
 }
 
-
-# In[ ]:
 
 app = Dash(__name__)
 
@@ -152,8 +139,6 @@ auth = dash_auth.BasicAuth(
 
 server = app.server
 
-
-# In[ ]:
 
 def get_fn_data(start_date, end_date, internal, editables):
 
@@ -202,8 +187,6 @@ def get_fn_data(start_date, end_date, internal, editables):
     return data
 
 
-# In[ ]:
-
 def update_on_page_load():
 
 #     pre-load client details table
@@ -251,7 +234,7 @@ def update_on_page_load():
                                     min_date_allowed=(datetime.date(2021,10,15)),
                                     max_date_allowed=(datetime.date(2021,10,24)),
                                     initial_visible_month=(
-                                        datetime.date.today()
+                                        datetime.date(2021,10,23)
                                         - datetime.timedelta(days=1)
                                     ),
                                     display_format="Y-MM-DD",
@@ -456,7 +439,6 @@ def toggle_collapse(n, is_open):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    port = int(os.environ.get('PORT', 8050))
 
-
-# In[ ]:
+    app.run(host="0.0.0.0", port=port)
